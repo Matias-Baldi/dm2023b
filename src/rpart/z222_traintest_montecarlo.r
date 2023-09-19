@@ -7,7 +7,7 @@ require("parallel")
 
 PARAM <- list()
 # reemplazar por las propias semillas
-PARAM$semillas <- c(102191, 200177, 410551, 552581, 892237)
+PARAM$semillas <- c(900019, 900091, 900199, 900323, 900329)
 
 #------------------------------------------------------------------------------
 # particionar agrega una columna llamada fold a un dataset que consiste
@@ -78,7 +78,7 @@ ArbolEstimarGanancia <- function(semilla, param_basicos) {
 #------------------------------------------------------------------------------
 
 # Aqui se debe poner la carpeta de la computadora local
-setwd("X:\\gdrive\\ITBA2023B\\") # Establezco el Working Directory
+setwd("~/buckets/b1") # Establezco el Working Directory
 # cargo los datos
 
 # cargo los datos
@@ -124,3 +124,5 @@ tb_salida[, mean(ganancia_test)]
 tb_salida[, lapply(.SD, mean)]
 
 # desvio estandar Distribucion Binomial   sqrt( n * p * (1-p) )
+
+
