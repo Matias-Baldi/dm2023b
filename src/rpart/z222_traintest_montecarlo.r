@@ -7,7 +7,7 @@ require("parallel")
 
 PARAM <- list()
 # reemplazar por las propias semillas
-PARAM$semillas <- c(900019, 900091, 900199, 900323, 900329)
+PARAM$semillas <- c(900019, 900091, 900199, 900323, 900329, 10001, 20013, 30029, 40041, 40059, 40079, 40101,50123, 50141, 50163, 60181, 70203, 70229, 80241)
 
 #------------------------------------------------------------------------------
 # particionar agrega una columna llamada fold a un dataset que consiste
@@ -105,7 +105,7 @@ salidas <- mcmapply(ArbolEstimarGanancia,
   PARAM$semillas, # paso el vector de semillas
   MoreArgs = list(param_basicos), # aqui paso el segundo parametro
   SIMPLIFY = FALSE,
-  mc.cores = 1
+  mc.cores = 5
 ) # se puede subir a 5 si posee Linux o Mac OS
 
 # muestro la lista de las salidas en testing
