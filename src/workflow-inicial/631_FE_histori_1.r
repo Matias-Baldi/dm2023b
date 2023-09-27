@@ -57,7 +57,7 @@ PARAM$CanaritosAsesinos$ratio <- 0.0
 # desvios estandar de la media, para el cutoff
 PARAM$CanaritosAsesinos$desvios <- 4.0
 # cambiar por la propia semilla
-PARAM$CanaritosAsesinos$semilla <- 200177
+PARAM$CanaritosAsesinos$semilla <- 900019
 
 PARAM$home <- "~/buckets/b1/"
 # FIN Parametros del script
