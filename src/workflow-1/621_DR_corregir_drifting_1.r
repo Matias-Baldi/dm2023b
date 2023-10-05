@@ -19,9 +19,9 @@ PARAM$variables_intrames <- TRUE # atencion esto esta en TRUE
 
 # valores posibles
 #  "ninguno", "rank_simple", "rank_cero_fijo", "deflacion", "estandarizar"
-PARAM$metodo <- "rank_cero_fijo"
+PARAM$metodo <- "deflacion"
 
-PARAM$home <- "~/buckets/b1/"
+PARAM$home <- "~/buckets/b2/"
 # FIN Parametros del script
 
 OUTPUT <- list()
