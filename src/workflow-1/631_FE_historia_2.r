@@ -56,7 +56,7 @@ PARAM$RandomForest$sample.fraction <- 0.8
 #PARAM$RandomForest$replace <- FALSE #Si es false el sample fraction cambia por 0.632, si es true prueba con 1.
 
 # varia de 0.0 a 2.0, si es 0.0 NO se activan
-PARAM$CanaritosAsesinos$ratio <- 0.5
+PARAM$CanaritosAsesinos$ratio <- 1.3
 # desvios estandar de la media, para el cutoff
 PARAM$CanaritosAsesinos$desvios <- 4.0
 # cambiar por la propia semilla
