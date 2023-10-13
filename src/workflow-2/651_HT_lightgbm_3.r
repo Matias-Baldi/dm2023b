@@ -36,11 +36,10 @@ PARAM$lgb_crossvalidation_folds <- 5
 
 PARAM$lgb_semilla <- 900019 # cambiar por su propia semilla
 
-
-# Hiperparametros FIJOS de  lightgbm
+ #Hiperparametros FIJOS de  lightgbm
 PARAM$lgb_basicos <- list(
   boosting = "gbdt", # puede ir  dart  , ni pruebe random_forest
-  objective = "binary",
+  objective = "softmax", # el objetivo para clasificación multiclase
   metric = "custom",
   first_metric_only = TRUE,
   boost_from_average = TRUE,
@@ -50,8 +49,8 @@ PARAM$lgb_basicos <- list(
   max_depth = -1L, # -1 significa no limitar,  por ahora lo dejo fijo
   min_gain_to_split = 0.0, # min_gain_to_split >= 0.0
   min_sum_hessian_in_leaf = 0.001, #  min_sum_hessian_in_leaf >= 0.0
-  lambda_l1 = 0.0, # lambda_l1 >= 0.0
-  lambda_l2 = 0.0, # lambda_l2 >= 0.0
+  lambda_l1 = 0.1, # lambda_l1 >= 0.0
+  lambda_l2 = 0.1, # lambda_l2 >= 0.0
   max_bin = 31L, # lo debo dejar fijo, no participa de la BO
   num_iterations = 9999, # un numero muy grande, lo limita early_stopping_rounds
 
@@ -64,10 +63,11 @@ PARAM$lgb_basicos <- list(
   drop_rate = 0.1, # 0.0 < neg_bagging_fraction <= 1.0
   max_drop = 50, # <=0 means no limit
   skip_drop = 0.5, # 0.0 <= skip_drop <= 1.0
+  num_class = 3 # el número de clases en el problema de clasificación
 
-  extra_trees = TRUE, # Magic Sauce
+  extra_trees = TRUE, # Magic Sauce # nolint: error.
 
-  seed = PARAM$lgb_semilla
+seed = PARAM$lgb_semilla
 )
 
 

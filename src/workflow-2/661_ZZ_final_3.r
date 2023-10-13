@@ -35,7 +35,7 @@ require("lightgbm")
 
 # Parametros del script
 PARAM <- list()
-PARAM$experimento <- "ZZ6610"
+PARAM$experimento <- "ZZ66104"
 PARAM$exp_input <- "HT6510"
 
 # Atencion, que cada modelos se procesa con 5 semillas, ajuste a SUS necesidades
@@ -77,7 +77,7 @@ GrabarOutput <- function() {
 OUTPUT$PARAM <- PARAM
 OUTPUT$time$start <- format(Sys.time(), "%Y%m%d %H%M%S")
 
-base_dir <- "~/buckets/b2/"
+base_dir <- "~/buckets/b1/"
 
 # creo la carpeta donde va el experimento
 dir.create(paste0(base_dir, "exp/", PARAM$experimento, "/"),
